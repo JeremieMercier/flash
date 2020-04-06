@@ -151,9 +151,9 @@ class Flash
         $buffer = '';
 
         if ($type === 'all') {
-            foreach ($flashes as $flashTypes) {
-                foreach ($flashTypes as $type => $flash) {
-                    $buffer .= $this->template->toHtml($type, $flash);
+            foreach ($flashes as $flashTypes => $flashMessage) {
+                foreach ($flashMessage as $flash) {
+                    $buffer .= $this->template->toHtml($flashTypes, $flash);
                 }
             }
 
